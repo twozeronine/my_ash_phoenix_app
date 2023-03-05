@@ -7,6 +7,11 @@
 # General application configuration
 import Config
 
+config :ash, :use_all_identities_in_manage_relationship?, false
+
+config :my_ash_phoenix_app,
+  ash_apis: [MyAshPhoenixApp.Blog]
+
 config :my_ash_phoenix_app,
   ecto_repos: [MyAshPhoenixApp.Repo]
 
