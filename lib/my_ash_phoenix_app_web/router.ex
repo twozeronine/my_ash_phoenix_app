@@ -1,4 +1,5 @@
 defmodule MyAshPhoenixAppWeb.Router do
+  alias MyAshPhoenixAppWeb.ExampleLiveView
   use MyAshPhoenixAppWeb, :router
 
   pipeline :browser do
@@ -38,6 +39,7 @@ defmodule MyAshPhoenixAppWeb.Router do
     scope "/" do
       pipe_through :browser
 
+      live "/posts", ExampleLiveView
       live_dashboard "/dashboard", metrics: MyAshPhoenixAppWeb.Telemetry
     end
   end
