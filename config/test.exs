@@ -11,7 +11,8 @@ config :my_ash_phoenix_app, MyAshPhoenixApp.Repo,
   hostname: "localhost",
   database: "my_ash_phoenix_app_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
-  pool_size: 10
+  pool_size: 10,
+  port: 25432
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
